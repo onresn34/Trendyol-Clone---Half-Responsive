@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="https://kit.fontawesome.com/b802d05be1.js" crossorigin="anonymous"></script>
+    <title>Erkek Butikleri, Yeni Sezon Ürünler - Trendyol</title>
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+.tinner-header,
+.thead-wrapper,
+.tpn-wrapper,
+.brands-wrapper,
+.ktg-wrapper {
+    width: 64%;
+}
+
+.tinner-header,
+.tpn-wrapper,
+.thead-wrapper{
+    margin: auto;
+}
+
+.tinner-header { 
+    height: 20px;
+    font-size: 12px;
+    font-weight: 900;
+}
+.tinner-header, 
+.theader-nav, 
+.thead-formList,
+.thead-formList > li,
+.thead-searc,
+.tpn-wrapper,
+.tpn-menu,
+#brands,
+.kategoriler {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.theader-nav,
+.thead-formList,
+.tpn-menu {
+ list-style-type: none;
+}
+.theader-list {
+    padding: 0 15px;
+}
+.theader-list > a {
+    color: #9999;
+}
+.theader-list > a:hover {
+    color: #999;
+}
+/* T-head Wrapper */
+.thead-wrapper,
+.brands-wrapper,
+.brands-pops  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.thead-logo {
+    width: 12%;
+}
+.thead-searc {
+    width: 40%;
+    justify-content: end;
+    border: 1px solid gray;
+    margin-left: 16px;
+}
+.thead-form {
+    width: 35%;
+}
+#thead-searc {
+    padding: 10px 15px;
+    width: 100%;
+    border: none;
+}
+
+.thead-formList > li,
+.tpn-list > a {
+    padding: 10px 15px;
+}
+.top-nav {
+    height: 20px;
+}
+.thead-formList a,
+.tpn-list a {
+   color: #333333;
+}
+.tpn-wrapper {
+    justify-content: center;
+    border-bottom: 1px solid #999
+}
+.tpn-menu {         
+    padding-left: 0;
+    justify-content: center;
+}
+.tpn-list {
+    font-size: 14px;
+    font-weight: 900;
+}
+.tpn-list a:hover {
+    color: orangered;
+    border-bottom: 2px solid orangered;
+}
+
+/* Filtre Scrol Bar */
+#brands{
+    height: 150px;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.brands-wrapper {
+    height: 100%;  
+}
+.brands-pops {
+    width: 100px;
+    height: 130px;
+    flex-direction: column;
+}
+.brands-pop {
+    width: 80px;
+    height: 80px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.brands-pop img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.accordion {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #fafafa;
+
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.filtre {
+    height: 1571px;
+    width: 185px;
+}
+.container {
+    display: flex;
+}
+/* Renkler */
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+.dot1 {
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 4px;
+}
+.dot2 {
+  height: 25px;
+  width: 25px;
+  background-color: lime;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 4px;
+}
+.dot3 {
+  height: 25px;
+  width: 25px;
+  background-color: purple;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 4px;
+}
+.dot4 {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(1, 124, 240);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+.dot5 {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(255, 153, 0);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 4px;
+}
+.dot6 {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(247, 7, 255);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 4px;
+}
+.dot7 {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(6, 255, 130);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 4px;
+}
+/*Products*/
+.container {
+    margin-left: 350px;
+}
+.products {
+    height: 70px;
+    width: 1006px;
+    background-color: rgb(222, 255, 237);
+}
+.transport {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+.fst-delivery{
+    display: flex;
+    margin-left: 22px;
+}
+.fast-txt {
+    margin-left: 20px;
+}
+
+.buttonSave {
+    background-color: #0bc15c;
+    margin-right: 30px;
+    padding: 10px 16px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    margin-top: -10px;
+
+}
+.column {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.prod-man {
+    height: 500px;
+    width: 231px;
+}
+.pord-man .prod-man-img{
+    width: 231px;
+    height: 349px;
+}
+.prod-man-img {
+    border: 1px solid lightgray;
+    border-radius: 6px;
+}
+.fa-star {
+    color: #FFC000;
+    font-size: 12px;
+}
+.fa-magnifying-glass {
+    color: #f27a1a;
+    font-size: 19px;
+}
+.font-color {
+    color: #f27a1a;
+    font-size: large;
+}
+.prod-man .prod-man-img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Başlangıç */
+.semi-footer {
+    height: initial;
+    background-color: white;
+    position: relative ;
+    padding-top: 40px;
+    border-top: 1px solid gray;
+}
+
+.sf-wrapper {
+    padding-left: 15%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sf-right, .sf-left {
+    width: 50%;
+}
+.sfr-wrapper {
+    display: flex;
+}
+
+.sfr-33 {
+    width: 33%;
+}
+
+.sfr-33 ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.sfr-33 a {
+    color: gray;
+    text-decoration: none;
+} 
+/*footer */
+#footer-container .footer {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+#footer-container .footer .footer__wrapper {
+    padding-top: 50px;
+    padding-bottom: 55px;
+    display: flex;
+    justify-content: space-between;
+    width: 1080px;
+    box-sizing: border-box;
+}
+
+#footer-container .footer .footer__wrapper>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#footer-container .footer .footer__wrapper a,
+#footer-container .footer .footer__wrapper ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer-container .footer .footer__wrapper a:hover,
+#footer-container .footer .footer__wrapper ul li a:hover {
+    text-decoration: underline;
+}
+
+#footer-container .footer .footer__wrapper ul li {
+    font-size: 13px;
+    margin: 20px 0 0;
+}
+
+#footer-container .footer .footer__wrapper ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#footer-container .footer .footer__wrapper h4 {
+    font-size: 22px;
+    padding-bottom: 5px;
+    margin: 0 0 20px 0;
+}
+.footer-card {
+    font-size: 16px;
+    font-weight: 600;
+}
+.footer-cards {
+    display: flex;
+}
+.troy-logo {
+    background: url("https://cdn.dsmcdn.com/frontend/web/assets/images/troy-logo-transparent.png") no-repeat;
+    display: inline-block;
+    width: 56px;
+    height: 26px;
+    margin-right: 13px;
+    background-size: cover;
+}
+.master-logo {
+    background: url("https://cdn.dsmcdn.com/web/production/footer-master-card.png") no-repeat center left;
+    width: 62px;
+    height: 35px;
+    display: inline-block;
+    position: relative;
+    background-size: contain;
+    top: -4px;
+}
+.visa-logo {
+    background:url("https://cdn.dsmcdn.com/web/production/footer-visa-black.png") no-repeat center left;
+    width: 75px;
+    height: 24px;
+    display: inline-block;
+    background-size: cover;
+    position: relative;
+    top: -3px;
+    margin-left: -14px;
+}
+.amex-logo {
+    background: url("https://cdn.dsmcdn.com/web/production/footer-amex.png") no-repeat center left;
+    width: 60px;
+    height: 25px;
+    display: inline-block;
+    background-size: cover;
+    position: relative;
+    top: -2px;
+    margin-left: 4px;  
+}
+#footer-container .footer__wrapper--socialImage.app.app-ios {
+    background-position: -240px 0 !important;
+    width: 155px;
+}
+#footer-container .footer__wrapper__apps, #footer-container .footer__wrapper .footer__wrapper__socialMedia {
+    height: 100px;
+}
+#footer-container .footer__wrapper--socialImage.app.app-android {
+    background-position: -405px 0 !important;
+    width: 155px;
+}
+#footer-container .footer__wrapper--socialImage.app.app-ios {
+    background-position: -240px 0 !important;
+    width: 155px;
+}
+#footer-container .footer__wrapper--socialImage.app {
+    height: 40px;
+    display: list-item;
+    margin-top: 10px;
+}
+#footer-container .footer__wrapper__apps a, #footer-container .footer__wrapper__socialMedia a {
+    width: 30px;
+    text-indent: -2000px;
+}
+#footer-container .footer__wrapper--socialImage.app.app-huawei {
+    background-position: -570px 0 !important;
+    width: 155px;
+}
+#footer-container .footer__wrapper--socialImage {
+    text-indent: -1000px;
+    background: url(https://cdn.dsmcdn.com/web/production/social-and-app-iconset.png) no-repeat 0 0;
+}
+/* Sosyal Medya */
+#footer-container .footer .footer__wrapper .footer__wrapper--mediumTitle {
+    font-weight: 600;
+    font-size: 16px;
+}
+#footer-container .footer .footer__wrapper ul li {
+    font-size: 13px;
+    color: #fff;
+    margin: 20px 0 0;
+}
+#footer-container .footer__wrapper--socialImage.sm {
+    height: 29px;
+    display: inline-block;
+}
+#footer-container .footer__wrapper__apps a, #footer-container .footer .footer__wrapper .footer__wrapper__socialMedia a {
+    width: 30px;
+    text-indent: -2000px;
+}
+#footer-container .footer__wrapper--socialImage.sm.sm-instagram {
+    background-position: -30px 0 !important;
+}
+#footer-container .footer__wrapper--socialImage.sm {
+    height: 29px;
+    display: inline-block;
+}
+#footer-container .footer__wrapper--socialImage.sm.sm-twitter {
+    background-position: -61px 0 !important;
+}
+#footer-container .footer__wrapper--socialImage.sm {
+    height: 29px;
+    display: inline-block;
+}
+#footer-container .footer__wrapper--socialImage.sm.sm-youtube {
+    background-position: -92px 0 !important;
+}
+#footer-container .footer__wrapper--socialImage.sm {
+    height: 29px;
+    display: inline-block;
+}
+/*Ulke Degistir */
+#footer-container .footer__wrapper--countrywrapper {
+    border: solid 1px #fff;
+    text-align: center;
+    font-family: source_sans_proregular;
+    font-size: 14px;
+    width: 95px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+#footer-container .footer .footer__wrapper #footer__wrapper__etbisAndTrustStamp {
+    display: flex;
+    align-items: center;
+}
+
+#footer-container #footer__wrapper__etbisAndTrustStamp a img {
+    width: 83px;
+    height: 93px;
+    margin-right: 30px;
+    padding: 5px;
+    background-color: #fff;
+    display: inline-block;
+}
+
+#footer-container #footer__wrapper__etbisAndTrustStamp #trustStamp {
+    background: url(https://cdn.dsmcdn.com/frontend/web/assets/images/trust-stamp.png) no-repeat;
+    background-size: 50px;
+    height: 50px;
+    display: flex;
+    width: 50px;
+    align-self: center;
+}
+
+#footer-container .bandInfo {
+    padding: 10px;
+    background: #2d2d2d;
+    margin-right: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#footer-container .bandInfo .bandInfo__wrapper {
+    width: 1080px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer-container .bandInfo .bandInfo__wrapper .bandInfo__wrapper__left {
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+}
+
+#footer-container .bandInfo .bandInfo__wrapper .bandInfo__wrapper__right ul li {
+    padding: 0 10px;
+    font-size: 12px;
+    color: #999999;
+    float: right;
+    cursor: pointer;
+}
+
+#footer-container a,
+#footer-container ul li a {
+    text-decoration: none;
+    color: white;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.jta {
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+
+</style>
+</head>
+<body>
+    <header class="t-header">
+        <div class="tinner-header">
+            <ul class="theader-nav">
+                <li class="theader-list"><a href="#">Indirim Kuponlarim</a></li>
+                <li class="theader-list"><a href="#">Trendyol'da Satis Yap</a></li>
+                <li class="theader-list"><a href="#">Yardim & Destek</a></li>
+            </ul>
+        </div>
+        <nav>
+            <div class="thead-wrapper">
+                <div class="thead-logo">
+                    <img src="img/ty-web.svg" alt="">
+                </div>
+                <div class="thead-searc">
+                    <input id="thead-searc" type="text" placeholder="Aradığınız,ürün, marka ve kategori yazınız">
+                    <span class="material-symbols-outlined">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                </div>
+                <div class="thead-form">
+                    <ul class="thead-formList">
+                        <li>
+                            <span class="material-symbols-outlined">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <a href="#">Giris Yap</a>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">
+                                <i class="fa-solid fa-heart"></i>
+                            </span>
+                            <a href="#">Favorlerim</a>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </span>
+                            <a href="#">Sepetim</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    </div>
+
+    <nav class="top-nav">
+        <div class="tpn-wrapper">
+            <ul class="tpn-menu">
+                <li class="tpn-list"><a href="#">KADIN</a></li>
+                <li class="tpn-list"><a href="erkek.html">ERKEK</a></li>
+                <li class="tpn-list"><a href="#">COCUK</a></li>
+                <li class="tpn-list"><a href="#">EV & MOBILYA</a></li>
+                <li class="tpn-list"><a href="#">SUPER MARKET</a></li>
+                <li class="tpn-list"><a href="#">KOZMETIK</a></li>
+                <li class="tpn-list"><a href="#">AYAKKABI & CANTA</a></li>
+                <li class="tpn-list"><a href="#">SAAT & AKSESUAR</a></li>
+                <li class="tpn-list"><a href="#">ELEKTRONIK</a></li>
+                <li class="tpn-list"><a href="#">SPOR & OUTDOOR</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="brands">
+        <div class="brands-wrapper">
+            <div class="brands-pops">
+                <div class="brands-pop">
+                    <img src="img/Senin icin.png">
+                </div>
+                <div>
+                    <p class="bp-text">Sana Ozel</p>
+                </div>
+            </div>
+            <div class="brands-pops">
+                <div class="brands-pop">
+                    <img src="img/Nike.png">
+                </div>
+                <div>
+                    <p class="bp-text">Sen de Al</p>
+                </div>
+            </div>
+            <div class="brands-pops">
+                <div class="brands-pop">
+                    <img src="img/Senin icin.png">
+                </div>
+                <div>
+                    <p class="bp-text">Kodlar & Hiz.</p>
+                </div>
+            </div>
+            <div class="brands-pops">
+                <div class="brands-pop">
+                    <img src="img/Nike.png">
+                </div>
+                <div>
+                    <p class="bp-text">Nike</p>
+                </div>
+            </div>
+            <div class="brands-pops">
+                <div class="brands-pop">
+                    <img src="img/Ipekyol.png">
+                </div>
+                <div>
+                    <p class="bp-text">Ipek Yol</p>
+                </div>
+            </div>
+            <div class="brands-pops">
+                <div class="brands-pop">
+                    <img src="img/Pullbearyeni.png">
+                </div>
+                <div>
+                    <p class="bp-text">Pull & Bear</p>
+                </div>
+            </div>
+            <div class="brands-pops">
+                <div class="brands-pop">
+                    <img src="img/Adidas.png">
+                </div>
+                <div>
+                    <p class="bp-text">Adidas</p>
+                </div>
+            </div>
+            <div class="brands-pops">
+                <div class="brands-pop">
+                    <img src="img/uspolo.png" alt="">
+                </div>
+                <div>
+                    <p class="bp-text">U.S. Polo</p>
+                </div>
+            </div>
+            <div class="brands-pops">
+                <div class="brands-pop">
+                    <img src="img/lacoste.png">
+                </div>
+                <div>
+                    <p class="bp-text">Lacoste</p>
+                </div>
+            </div>
+            <div class="brands-pops">
+                <div class="brands-pop">
+                    <img src="img/trendyolmila.png">
+                </div>
+                <div>
+                    <p class="bp-text">Trendyol Milla</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="filtre">
+            <button class="accordion">İlgili Kategoriler <i class="fa-solid fa-angle-down"></i></button>
+                <div class="panel">
+                   <b> Erkek</b>
+                </div>
+
+            <button class="accordion">Cinsiyet <i class="fa-solid fa-angle-down"></i></button>
+                <div class="panel">
+                    <form>
+                        <input type="checkbox" id="male" name="erkek" value="erkek">
+                        <label for="vehicle1"> Erkek</label><br>
+                        <input type="checkbox" id="Famale" name="kadin" value="kadin">
+                        <label for="vehicle2"> Kadın</label><br>
+                        <input type="checkbox" id="kids" name="cocuk" value="Cocuk">
+                        <label for="vehicle3"> Çocuk</label>
+                      </form>
+                </div>
+
+            <button class="accordion">Marka <i class="fa-solid fa-angle-down"></i></button>
+                <div class="panel">
+                    <form>
+                        <input type="checkbox" id="mavi" name="brandMavi" value="Mavi">
+                        <label for="vehicle1"> Mavi</label><br>
+                        <input type="checkbox" id="koton" name="brandKoton" value="kadin">
+                        <label for="vehicle2"> Koton</label><br>
+                        <input type="checkbox" id="kids" name="brandHm" value="Cocuk">
+                        <label for="vehicle3"> H&M</label><br>
+                        <input type="checkbox" id="nike" name="brandNike" value="NIK">
+                        <label for="vehicle1"> Nike</label><br>
+                        <input type="checkbox" id="jj" name="brandJj" value="JandJ">
+                        <label for="vehicle2"> Jack & Jones</label><br>
+                        <input type="checkbox" id="adidas" name="brandAdidas" value="ADDS">
+                        <label for="vehicle3"> Adidas</label><br>
+                        <input type="checkbox" id="trendyolMan" name="brandTrndyol" value="TrndyolMN">
+                        <label for="vehicle1"> Trendyol Man</label><br>
+                        <input type="checkbox" id="uspolo" name="brandUspolo" value="USPL">
+                        <label for="vehicle2"> US Polo Erkek</label><br>
+                        <input type="checkbox" id="adidas" name="brandLvs" value="Giyim">
+                        <label for="vehicle3"> Levi's</label>
+                      </form>
+                </div>
+                <button class="accordion">Beden <i class="fa-solid fa-angle-down"></i></button>
+                <div class="panel">
+                    <form>
+                        <input type="checkbox" id="xs" name="typXs" value="XSmall">
+                        <label for="vehicle1"> XS</label><br>
+                        <input type="checkbox" id="s" name="typeS" value="Small">
+                        <label for="vehicle1"> S</label><br>
+                        <input type="checkbox" id="m" name="typeM" value="Medium">
+                        <label for="vehicle2"> M</label><br>
+                        <input type="checkbox" id="l" name="typeL" value="Large">
+                        <label for="vehicle3"> L</label><br>
+                        <input type="checkbox" id="xl" name="typeXl" value="XLarge">
+                        <label for="vehicle1"> XL</label><br>
+                        <input type="checkbox" id="xxl" name="typexxl" value="XXLarge">
+                        <label for="vehicle2"> XXL</label><br>
+                        <input type="checkbox" id="xxxl" name="typexxxl" value="XXXLarge">
+                        <label for="vehicle3"> XXXL</label>
+                      </form>
+                </div>
+
+            <button class="accordion">Renk <i class="fa-solid fa-angle-down"></i></button>
+                <div class="panel">
+                    <span class="dot"></span>
+                    <span class="dot1"></span>
+                    <span class="dot2"></span>
+                    <span class="dot3"></span>
+                    <span class="dot4"></span>
+                    <span class="dot5"></span>
+                    <span class="dot6"></span>
+                    <span class="dot7"></span>
+                </div>
+
+            <button class="accordion">Fiyat <i class="fa-solid fa-angle-down"></i></button>
+                <div class="panel">
+                    <form>
+                        <input type="checkbox" id="mavi" name="brandMavi" value="Mavi">
+                        <label for="vehicle1"> 10 TL - 100 TL </label><br>
+                        <input type="checkbox" id="koton" name="brandKoton" value="kadin">
+                        <label for="vehicle2"> 100 TL - 250 TL </label><br>
+                        <input type="checkbox" id="kids" name="brandHm" value="Cocuk">
+                        <label for="vehicle3"> 250 TL - 500 TL </label><br>
+                        <input type="checkbox" id="nike" name="brandNike" value="erkek">
+                        <label for="vehicle1"> 500 TL - 1000 TL </label><br>
+                        <input type="checkbox" id="jj" name="brandJj" value="kadin">
+                        <label for="vehicle2"> 1000 TL Üstü</label><br>
+                      </form>
+                </div>
+                <button class="accordion">Yıldızlı Ürünler <i class="fa-solid fa-angle-down"></i></button>
+                <div class="panel">
+                    <form>
+                        <input type="checkbox" id="mavi" name="brandMavi" value="Mavi">
+                        <label for="vehicle1"> 3 Yıldızlı Ürün </label><br>
+                        <input type="checkbox" id="koton" name="brandKoton" value="kadin">
+                        <label for="vehicle2"> 2 Yıldızlı Ürün </label><br>
+                        <input type="checkbox" id="kids" name="brandHm" value="Cocuk">
+                        <label for="vehicle3"> 1 Yıldızlı Ürün </label><br>
+                      </form>
+                </div>    
+                <button class="accordion">Desen <i class="fa-solid fa-angle-down"></i></button>
+                <div class="panel">
+                    <form>
+                        <input type="checkbox" id="mavi" name="brandMavi" value="Mavi">
+                        <label for="vehicle1"> Baskılı </label><br>
+                        <input type="checkbox" id="koton" name="brandKoton" value="kadin">
+                        <label for="vehicle2"> Çizgili </label><br>
+                        <input type="checkbox" id="kids" name="brandHm" value="Cocuk">
+                        <label for="vehicle3"> Düz Renk </label><br>
+                        <input type="checkbox" id="nike" name="brandNike" value="erkek">
+                        <label for="vehicle1"> Yazılı </label><br>
+                        <input type="checkbox" id="jj" name="brandJj" value="kadin">
+                        <label for="vehicle2"> Renkli</label><br>
+                      </form>
+                </div>    
+                <button class="accordion">Materyal <i class="fa-solid fa-angle-down"></i></button>
+                <div class="panel">
+                    <form>
+                        <input type="checkbox" id="mavi" name="brandMavi" value="Mavi">
+                        <label for="vehicle1"> Mikropolyester </label><br>
+                        <input type="checkbox" id="koton" name="brandKoton" value="kadin">
+                        <label for="vehicle2"> Polyester </label><br>
+                        <input type="checkbox" id="kids" name="brandHm" value="Cocuk">
+                        <label for="vehicle3"> Pamuk </label><br>
+                        <input type="checkbox" id="nike" name="brandNike" value="erkek">
+                        <label for="vehicle1"> Keten </label><br>
+                        <input type="checkbox" id="jj" name="brandJj" value="kadin">
+                        <label for="vehicle2"> Pamuk-Elastan</label><br>
+                      </form>
+                </div>
+                <button class="accordion">Stil <i class="fa-solid fa-angle-down"></i></button>
+                <div class="panel">
+                    <form>
+                        <input type="checkbox" id="mavi" name="brandMavi" value="Mavi">
+                        <label for="vehicle1"> Casual </label><br>
+                        <input type="checkbox" id="koton" name="brandKoton" value="kadin">
+                        <label for="vehicle2"> Sokak Stili </label><br>
+                        <input type="checkbox" id="kids" name="brandHm" value="Cocuk">
+                        <label for="vehicle3"> Klasik </label><br>
+                        <input type="checkbox" id="nike" name="brandNike" value="erkek">
+                        <label for="vehicle1"> Trend </label><br>
+                      </form>
+                </div>    
+                <button class="accordion">Kullanım Alanı <i class="fa-solid fa-angle-down"></i></button>
+                <div class="panel">
+                    <form>
+                        <input type="checkbox" id="mavi" name="brandMavi" value="Mavi">
+                        <label for="vehicle1"> Günlük </label><br>
+                        <input type="checkbox" id="koton" name="brandKoton" value="kadin">
+                        <label for="vehicle2"> Outdoor </label><br>
+                        <input type="checkbox" id="kids" name="brandHm" value="Cocuk">
+                        <label for="vehicle3"> Spor </label><br>
+                      </form>
+                </div>        
+                <button class="accordion">Koleksiyon <i class="fa-solid fa-angle-down"></i></button>
+                <div class="panel">
+                    <form>
+                        <input type="checkbox" id="mavi" name="brandMavi" value="Mavi">
+                        <label for="vehicle1"> Sportswear </label><br>
+                        <input type="checkbox" id="koton" name="brandKoton" value="kadin">
+                        <label for="vehicle2"> Basic </label><br>
+                        <input type="checkbox" id="kids" name="brandHm" value="Cocuk">
+                        <label for="vehicle3"> Design </label><br>
+                        <input type="checkbox" id="nike" name="brandNike" value="erkek">
+                        <label for="vehicle1"> Young </label><br>
+                        <input type="checkbox" id="jj" name="brandJj" value="kadin">
+                        <label for="vehicle2"> Unisex</label><br>
+                      </form>
+                </div>    
+                <button class="accordion">Sürdürülebilir <i class="fa-solid fa-angle-down"></i></button>
+                <div class="panel">
+                    <form>
+                        <input type="checkbox" id="mavi" name="brandMavi" value="Mavi">
+                        <label for="vehicle1"> Geri Dönüştürülmüş Materyal </label><br>
+                        <input type="checkbox" id="koton" name="brandKoton" value="kadin">
+                        <label for="vehicle2"> Ekoteks </label><br>
+                        <input type="checkbox" id="kids" name="brandHm" value="Cocuk">
+                        <label for="vehicle3"> Organik Pamul </label><br>
+                      </form>
+                </div>            
+        </div>
+        <div class="products">
+            <div class="transport">
+                <div class="fst-delivery">
+                    <div class="fst-img">
+                         <img src="fast-delivery.png" alt="" style="width: auto;">
+                    </div>
+                    <div class="fast-txt">
+                        <span class="fst-txt"><b>Hızlı Teslimat</b></span> yapılan ürünleri göster.
+                    </div>
+                </div>
+                <div class="bttns">
+                    <button class="buttonSave">Uygula</button>
+                </div>
+            </div>
+            <div class="grids-man">
+                <div class="column">
+                    <div class="prod-man">
+                        <div class="prod-man-img">
+                            <img src="alley-man.png" alt="">
+                        </div>
+                        <div class="prod-man-text">
+                            <p><b>Alley</b> Siyah baskılı %100 Pamuk</p>
+                            <p>Oversize T-Shirt</p>
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                            <p class="font-color"><b>48,14 TL</b></p>
+                        </div>
+                    </div>
+                    <div class="prod-man">
+                        <div class="prod-man-img">
+                            <img src="bull-black-man.png" alt="">
+                        </div>
+                        <div class="prod-man-text">
+                            <p><b>Beni Sen Giydir</b> Erkek Siyah Büyük</p>
+                            <p>Logo Chicago Bulls Baskılı</p>
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                            <p class="font-color"><b>97,71 TL</b></p>
+                        </div>
+                    </div>
+                    <div class="prod-man">
+                        <div class="prod-man-img">
+                            <img src="bull-wht-man.png" alt="">
+                        </div>
+                        <div class="prod-man-text">
+                            <p><b>Beni Sen Giydir</b> Erkek Beyaz Bulls</p>
+                            <p>Baskılı Oversize Bisiklet Yaka</p>
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                            <p class="font-color"><b>129,95 TL</b></p>
+                        </div>
+                    </div>
+                    <div class="prod-man">
+                        <div class="prod-man-img">
+                            <img src="deplain-man.png" alt="">
+                        </div>
+                        <div class="prod-man-text">
+                            <p><b>DE PLEIN</b> Unisex Beyaz Oversize</p>
+                            <p>Kapüşonlu %100 Pamuk T-Shirt</p>
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                            <p class="font-color"><b>165,51 TL</b></p>
+                        </div>
+                    </div>
+               </div>
+                <div class="column">
+                    <div class="prod-man">
+                        <div class="prod-man-img">
+                            <img src="mavi-man.png" alt="">
+                        </div>
+                        <div class="prod-man-text">
+                            <p><b>MAVI</b> Logo Baskılı Beyaz T-shirt</p>
+                            <p>Slim Fit/ Dar Kesim</p>
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                            <p class="font-color"><b>129,99 TL</b></p>
+                        </div>
+                    </div>
+
+                    <div class="prod-man">
+                        <div class="prod-man-img">
+                            <img src="nasa-blck-man.png" alt="">
+                        </div>
+                        <div class="prod-man-text">
+                            <p><b>Trendypassion</b> Nasa Baskılı</p>
+                            <p>Siyah Pamuk T-Shirt</p>
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                            <p class="font-color"><b>52,98 TL</b></p>
+                        </div>
+                    </div>
+
+                    <div class="prod-man">
+                        <div class="prod-man-img">
+                            <img src="noche-wht-man.png" alt="">
+                        </div>
+                        <div class="prod-man-text">
+                            <p><b>Noche un Doce</b> Beyaz Oversize</p>
+                            <p>Yılan Sırt Baskılı T-Shirt</p>
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                            <p class="font-color"><b>165,51 TL</b></p>
+                        </div>
+                    </div>
+
+                    <div class="prod-man">
+                        <div class="prod-man-img">
+                            <img src="rubras-wht-man.png" alt="">
+                        </div>
+                        <div class="prod-man-text">
+                            <p><b>Rubras</b> Erkek Beyaz Oversize</p>
+                            <p>Pamuklu Bisiklet Yaka</p>
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                            <p class="font-color"><b>105,70 TL</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="prod-man">
+                        <div class="prod-man-img">
+                            <img src="trendpassion-unsx.jpg" alt="">
+                        </div>
+                        <div class="prod-man-text">
+                            <p><b>Trendypassion</b> Sırt Pusula Baskı</p>
+                            <p>T-Shirt</p>
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                            <p class="font-color"><b>64,90 TL</b></p>
+                        </div>
+                    </div>
+                    <div class="prod-man">
+                        <div class="prod-man-img">
+                            <img src="trendyol-wht-man.png" alt="">
+                        </div>
+                        <div class="prod-man-text">
+                            <p><b>Trendyol Man</b> Beyaz Erkek</p>
+                            <p>Oversize Kısa Kollu</p>
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                            <p class="font-color"><b>104,99 TL</b></p>
+                        </div>
+                    </div>
+                    <div class="prod-man">
+                        <div class="prod-man-img">
+                            <img src="trndyl-brwn-man.png" alt="">
+                        </div>
+                        <div class="prod-man-text">
+                            <p><b>Trendyol Man</b> Kahverengi Erkek</p>
+                            <p>Oversize Bisiklet Yaka</p>
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                            <p class="font-color"><b>118,99 TL</b></p>
+                        </div>
+                    </div>
+                    <div class="prod-man">
+                        <div class="prod-man-img">
+                            <img src="twentyone-blck-man.png" alt="">
+                        </div>
+                        <div class="prod-man-text">
+                            <p><b>twentyone</b> Skullcrack Oversize</p>
+                            <p>Unisex T-Shirt Siyah</p>
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                            <p class="font-color"><b>46,24 TL</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="semi-footer">
+        <div class="sf-wrapper">
+            <div class="sf-left">
+                <h3>Popüler Marka ve Mağazalar</h3>
+                <div class="sfr-wrapper">
+                    <div class="sfr-33">
+                        <ul>
+                            <li><a href="">Penti</a></li>
+                            <li><a href="">Watsons</a></li>
+                            <li><a href="">Stradivarius</a></li>
+                            <li><a href="">İstikbal</a></li>
+                            <li><a href="">Puma</a></li>
+                            <li><a href="">Xiaomi</a></li>
+                            <li><a href="">Lenovo</a></li>
+                            <li><a href="">Adidas</a></li>
+                            <li><a href="">Columbia</a></li>
+                            <li><a href="">Madame Coco</a></li>
+                            <li><a href="">Defacto</a></li>
+                            <li><a href="">Oriflame</a></li>
+                            <li><a href="">LEGO</a></li>
+                            <li><a href="">Ray-Ban</a></li>
+                            <li><a href="">Pierre Cardin</a></li>
+                        </ul>
+                    </div>
+                    <div class="sfr-33">
+                        <ul>
+                            <li><a href="">Mango</a></li>
+                            <li><a href="">English Home</a></li>
+                            <li><a href="">Bellona</a></li>
+                            <li><a href="">Civil</a></li>
+                            <li><a href="">Adidas</a></li>
+                            <li><a href="">Apple</a></li>
+                            <li><a href="">IBM</a></li>
+                            <li><a href="">Nike</a></li>
+                            <li><a href="">Oppo</a></li>
+                            <li><a href="">Arçelik</a></li>
+                            <li><a href="">Mavi</a></li>
+                            <li><a href="">Farmasi</a></li>
+                            <li><a href="">Bosch</a></li>
+                            <li><a href="">Ossé</a></li>
+                            <li><a href="">Migros</a></li>
+                        </ul>
+                    </div>
+                    <div class="sfr-33">
+                        <ul>
+                            <li><a href="">Vivense</a></li>
+                            <li><a href="">Bershka</a></li>
+                            <li><a href="">Beymen</a></li>
+                            <li><a href="">Addax</a></li>
+                            <li><a href="">Derimod</a></li>
+                            <li><a href="">Huawei</a></li>
+                            <li><a href="">Monster Notebook</a></li>
+                            <li><a href="">DYSON</a></li>
+                            <li><a href="">Skechers</a></li>
+                            <li><a href="">Under Armour</a></li>
+                            <li><a href="">Koton</a></li>
+                            <li><a href="">Pierre Cardin</a></li>
+                            <li><a href="">Karaca</a></li>
+                            <li><a href="">Herbalife</a></li>
+                            <li><a href="">Avon</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sf-right">
+                <h3>Popüler Sayfalar</h3>
+                <div class="sfr-wrapper">
+                    <div class="sfr-33">
+                        <ul>
+                            <li><a href="">Apple Watch</a></li>
+                            <li><a href="">Gratis</a></li>
+                            <li><a href="">Stradivarius</a></li>
+                            <li><a href="">Mondi</a></li>
+                            <li><a href="">Tv Ünitesi</a></li>
+                            <li><a href="">Bisiklet</a></li>
+                            <li><a href="">Okul Alışverişi</a></li>
+                            <li><a href="">Çay Makinesi</a></li>
+                            <li><a href="">Saat</a></li>
+                            <li><a href="">Sneaker</a></li>
+                            <li><a href="">Hediye Rehberi</a></li>
+                            <li><a href="">Oyuncu Kulaklığı</a></li>
+                            <li><a href="">Elbise</a></li>
+                            <li><a href="">Termos</a></li>
+                            <li><a href="">Kamp Eşyaları</a></li>
+                        </ul>
+                    </div>
+                    <div class="sfr-33">
+                        <ul>
+                            <li><a href="">Ayakkabı</a></li>
+                            <li><a href="">Iphone SE</a></li>
+                            <li><a href="">Elbise</a></li>
+                            <li><a href="">Trendyol EN</a></li>
+                            <li><a href="">Trendyol Blog</a></li>
+                            <li><a href="">Buzdolabı</a></li>
+                            <li><a href="">Bileklik</a></li>
+                            <li><a href="">Tartı</a></li>
+                            <li><a href="">Ev Aletleri</a></li>
+                            <li><a href="">Oyuncu Ekipmanları</a></li>
+                            <li><a href="">Kolye</a></li>
+                            <li><a href="">Klavye</a></li>
+                            <li><a href="">Bluetooth Kulaklık</a></li>
+                            <li><a href="">Tam Altın</a></li>
+                            <li><a href="">Takım Elbise</a></li>
+                        </ul>
+                    </div>
+                    <div class="sfr-33">
+                        <ul>
+                            <li><a href="">Iphone13</a></li>
+                            <li><a href="">Robot Süpürge</a></li>
+                            <li><a href="">Tablet</a></li>
+                            <li><a href="">Netflix Hediye Çeki</a></li>
+                            <li><a href="">Abiye Elbise</a></li>
+                            <li><a href="">Elektrikli Scooter</a></li>
+                            <li><a href="">Pantalon</a></li>
+                            <li><a href="">Karpuz</a></li>
+                            <li><a href="">Abiye Elbise</a></li>
+                            <li><a href="">Tablet</a></li>
+                            <li><a href="">LCW</a></li>
+                            <li><a href="">Çalışma Masası</a></li>
+                            <li><a href="">Trendyol EN</a></li>
+                            <li><a href="">MSI</a></li>
+                            <li><a href="">Tam Altın</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <footer>
+        <div id="footer-container">
+            <div class="footer">
+                <div class="footer__wrapper">
+                    <div>
+                        <div><a href="https://www.trendyol.com">
+                                <h4 class="footer__wrapper--sectionTitle">Trendyol</h4>
+                            </a>
+                            <ul>
+                                <li><a href="/international.html/tr#whoWeAre">Biz Kimiz</a></li>
+                                <li><a href="/international.html/tr#careers">Kariyer</a></li>
+                                <li><a href="/iletisim.html">İletişim</a></li>
+                                <li><a href="https://partner.trendyol.com/onboarding/satici-formu"
+                                        target="_blank">Trendyol'da
+                                        Satış Yap</a></li>
+                                <li><a href="/s/kurumsal-cuzdan-hediye-ceki" target="_blank">Kurumsal Hediye Çeki</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <p class="footer-card">Güvenli Alışveriş</p>
+                                    </li>
+                                    <li>
+                                        <div class="footer-cards">
+                                            <div class="troy-logo"> </div>
+                                            <div class="master-logo"> </div>
+                                            <div class="visa-logo"> </div>
+                                            <div class="amex-logo"> </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <ul><a href="/international.html">
+                                    <h4 class="footer__wrapper--sectionTitle">About us</h4>
+                                </a>
+                                <li><a href="/international.html/en#whoWeAre">Who we are</a></li>
+                                <li><a href="/international.html/en#careers">Careers</a></li>
+                                <li><a href="/international.html/en#contactUs">Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>
+                                    <p class="footer__wrapper--mediumTitle footer-card">Mobil Uygulamalar</p>
+                                </li>
+                                <li>
+                                    <div class="footer__wrapper__apps"><a
+                                            class="footer__wrapper--socialImage app app-ios"
+                                            href="http://itunes.apple.com/tr/app/trendyol.com/id524362642?mt=8"
+                                            target="_blank" rel="noopener"></a><a
+                                            class="footer__wrapper--socialImage app app-android"
+                                            href="https://play.google.com/store/apps/details?id=trendyol.com&amp;feature=search_result#?t=W251bGwsMSwyLDEsInRyZW5keW9sLmNvbSJd"
+                                            rel="noopener"></a><a class="footer__wrapper--socialImage app app-huawei"
+                                            href="https://appgallery.cloud.huawei.com/ag/n/app/C101645013?source=appshare&amp;subsource=C101645013"
+                                            rel="noopener"></a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div><a href="/s/kampanyalar">
+                                <h4 class="footer__wrapper--sectionTitle">Kampanyalar</h4>
+                            </a>
+                            <ul>
+                                <li><a href="/s/kampanyalar">Aktif Kampanyalar</a></li>
+                                <li><a href="/s/elite">Elite Üyelik</a></li>
+                                <li><a href="/s/hediye-rehberi" target="_blank">Hediye Fikirleri</a></li>
+                                <li><a href="/s/trendyol-indirim-gunleri" target="_blank">Trendyol Fırsatları</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><p class="footer__wrapper--mediumTitle">Sosyal Medya</p></li>
+                                <li>
+                                    <div class="footer__wrapper__socialMedia"><a class="footer__wrapper--socialImage sm sm-facebook" href="http://www.facebook.com/Trendyol" target="_blank"></a><a class="footer__wrapper--socialImage sm sm-instagram" href="http://instagram.com/trendyolcom" target="_blank"></a><a class="footer__wrapper--socialImage sm sm-twitter" href="http://twitter.com/trendyol" target="_blank"></a><a class="footer__wrapper--socialImage sm sm-youtube" href="http://www.youtube.com/trendyol" target="_blank"></a></div></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div><a href="/yardim/sorular">
+                                <h4 class="footer__wrapper--sectionTitle">Yardım</h4>
+                            </a>
+                            <ul>
+                                <li><a href="https://www.trendyol.com/yardim/sorular/">Sıkça Sorulan Sorular</a></li>
+                                <li><a href="https://www.trendyol.com/yardim/sorular?liveChat=True">Canlı Yardım</a>
+                                </li>
+                                <li><a href="https://www.trendyol.com/yardim/sorular/1">Nasıl İade Edebilirim</a></li>
+                                <li><a href="https://www.trendyol.com/yardim/sorular/2002?grup=1">İşlem Rehberi</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><button class="footer__wrapper--countrywrapper">Ülke Değiştir</button></li>
+                                <li>
+                                    <div id="footer__wrapper__etbisAndTrustStamp">
+                                        <div id="305B30787EA6409BBF6EFBEA3D437B96"><a
+                                                href="https://etbis.eticaret.gov.tr/sitedogrulama/305B30787EA6409BBF6EFBEA3D437B96"
+                                                target="_blank"><img
+                                                    src="https://cdn.dsmcdn.com/web/production/etbis-qr.png"></a></div>
+                                        <div><a id="trustStamp"
+                                                href="https://www.guvendamgasi.org.tr/firmadetay.php?Guid=8e69c8c5-2f03-11ea-8718-48df373f4850"
+                                                target="_blank"></a></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bandInfo">
+                <div class="bandInfo__wrapper">
+                    <div class="bandInfo__wrapper__left" id="bandInfo__wrapper__left--link1">©2022 DSM Grup Danışmanlık
+                        İletişim ve Satış Tic.A.Ş.-Her Hakkı Saklıdır.</div>
+                    <div class="bandInfo__wrapper__right">
+                        <ul style="list-style: none;margin: 0;padding: 0;">
+                            <li><a id="bandInfo__wrapper__left--link2" href="/kullanim_kosullari.html"
+                                    target="_blank">Kullanım Koşulları</a></li>
+                            <li><a id="bandInfo__wrapper__left--link3" href="http://www.dsmgrup.com" target="_blank">DSM
+                                    Grup</a></li>
+                            <li><a id="bandInfo__wrapper__left--link4" href="/kisisel_verilerin_korunmasi.html"
+                                    target="_blank">KVK ve Gizlilik Politikası</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+
+
+<script src="erkek.js"></script>
+</html>

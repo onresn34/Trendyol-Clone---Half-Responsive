@@ -1,0 +1,1 @@
+# Trendyol-Clone---Half-Responsive
